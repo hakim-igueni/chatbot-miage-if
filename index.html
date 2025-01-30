@@ -19,6 +19,14 @@
             text-align: center;
             color: white;
         }
+        .text-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, p {
+            margin: 0;
+        }
         .chatbot-button {
             position: fixed;
             bottom: 20px;
@@ -35,8 +43,10 @@
     </style>
 </head>
 <body>
-    <h1>Bienvenue sur mon site dynamique</h1>
-    <p>Un site avec une image de fond et un chatbot interactif</p>
+    <div class="text-container">
+        <h1>Bienvenue dans la page du master MIAGE IF</h1>
+        <p>Vous pouvez posez vos questions au chatbot</p>
+    </div>
     
     <button class="chatbot-button" onclick="toggleChatbot()">💬</button>
     
