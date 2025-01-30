@@ -14,18 +14,36 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             text-align: center;
             color: white;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
         }
         .text-container {
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
+            margin-top: 80px;
         }
-        h1, p {
-            margin: 0;
+        .contact-form {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            width: 50%;
         }
         .chatbot-button {
             position: fixed;
@@ -43,9 +61,39 @@
     </style>
 </head>
 <body>
-    <div class="text-container">
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Nous Contacter</a>
+    </div>
+    
+    <div id="home" class="text-container">
         <h1>Bienvenue dans la page du master MIAGE IF</h1>
-        <p>Vous pouvez posez vos questions au chatbot</p>
+        <p>Un site avec une image de fond et un chatbot interactif</p>
+    </div>
+    
+    <div id="about" class="text-container">
+        <h2>À propos</h2>
+        <p>Le Master MIAGE IF est un programme d'excellence en informatique et gestion.</p>
+    </div>
+    
+    <div id="contact" class="contact-form">
+        <h2>Nous Contacter</h2>
+        <form action="mailto:responsable@miage-if.fr" method="post" enctype="text/plain">
+            <div class="mb-3">
+                <input type="text" class="form-control" name="Nom" placeholder="Nom" required>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" name="Prénom" placeholder="Prénom" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" name="Email" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" name="Message" rows="4" placeholder="Votre message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
     </div>
     
     <button class="chatbot-button" onclick="toggleChatbot()">💬</button>
